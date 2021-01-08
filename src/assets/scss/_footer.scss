@@ -1,0 +1,42 @@
+.footer {
+  height: $footer-height;
+
+  .line {
+    height: 2px;
+    border-top: 1px solid $line-gray;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .logo {
+    margin-top: 17px;
+    margin-left: 53px;
+  }
+
+  .copyright {
+    line-height: $footer-height;
+    position: absolute;
+    text-align: right;
+    color: #474647;
+    width: 100%;
+    padding-right: 53px;
+
+    span {
+      display: inline-block;
+      font-family: $cathybk-font-family;
+      font-size: 13px;
+      line-height: 18px;
+      margin-top: 18px;
+      color: $gray-dark-color;
+    }
+
+    .url {
+      padding-right: 7px;
+    }
+
+    .name {
+      border-left: 1px solid $line-gray;
+      padding-left: 7px;
+    }
+  }
+}

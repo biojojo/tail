@@ -1,0 +1,229 @@
+<div class="step2">
+  <app-card [title]="'數存開戶審查服務'" [stepNum]="'2'">
+    <div class="compare">
+      <div class="compare-title">
+        <div class="form-group form-row case-header-width">
+          <div class="col-form-label text-left cathybk-label-text">
+            案件狀態：2009120000122&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+            審查次數：1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+            最後審查狀態：<button
+            class="btn btn-primary btn-30 btn-reason"  (click)="openModal()"
+          >
+            待補件
+          </button>
+          </div>
+        </div>
+      </div>
+      <div class="compare-body">
+        <div class="row">
+          <h4 class="col-12 mb-2"><app-icon-issue></app-icon-issue> 申請資料及資料審核
+          </h4>
+          <div class="clearfix"></div>
+          <div class="col-6 compare-body-content">
+            <div class="compare-header-2 mb-2">
+              申請人基本資料及申請產品</div>
+              <div class="compare-body-data">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-sm-6 col-lg-3 text-left compare-data-label"
+                      >
+                      進件管道
+                      </div>
+                      <div
+                        class="col-sm-6 col-lg-3 text-left compare-data-text"
+                      >
+                        KOKO
+                      </div>
+                      <div
+                        class="col-sm-6 col-lg-3 text-left compare-data-label"
+                      >
+                        客戶性質別
+                      </div>
+                      <div
+                        class="col-sm-6 col-lg-3 text-left compare-data-text"
+                      >
+                        一般戶
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row fixContent">
+                      <div
+                        class="col-sm-6 col-lg-3 text-left compare-data-label"
+                      >
+                      申請帳戶
+                      </div>
+                      <div class="col-sm-6 col-lg-9 text-left compare-data-text">
+                        <button class="btn btn-success cursor-none btn-currency-cs" [ngClass]=" isMobile ? 'pt-1 pb-1' : ''">台幣</button><button class="btn btn-default ml-2 cursor-none btn-currency-cs" [ngClass]=" isMobile ? 'pt-1 pb-1' : ''">外幣</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-sm-6 col-lg-3 text-left compare-data-label"
+                      >
+                        開戶目的
+                      </div>
+                      <div
+                        class="col-sm-6 col-lg-3 text-left compare-data-text"
+                      >
+                        存款
+                      </div>
+                      <div
+                        class="col-sm-6 col-lg-3 text-left compare-data-label"
+                      >
+                        CRS
+                      </div>
+                      <div
+                        class="col-sm-6 col-lg-3 text-left compare-data-text"
+                      >
+                        Y
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-sm-6 col-lg-3 text-left compare-data-label"
+                      >
+                        他行開戶
+                      </div>
+                      <div
+                        class="col-sm-6 col-lg-3 text-left compare-data-text"
+                      >
+                        0
+                      </div>
+                      <div
+                        class="col-sm-6 col-lg-3 text-left compare-data-label"
+                      >
+                        他行開戶目的
+                      </div>
+                      <div
+                        class="col-sm-6 col-lg-3 text-left compare-data-text"
+                      >
+                        -
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="col-6 compare-body-content">
+            <div class="compare-header-2 mb-2" [ngClass]=" isMobile ? 'compare-title-btn-cs' : ''">
+              綜合查詢結果<div class="btn btn-orange float-right position-absolute reload-right-top" (click)="showSpinner()">
+                <app-icon-reload></app-icon-reload> 重新查詢
+              </div></div>
+            <div class="row compare-body-content aml">
+              <div class="col-3 text-center mt-3 mb-3" [ngClass]=" isMobile ? 'p-2' : ''"><app-icon-ok class="cursor-pointer" (click)="openOkModal()"></app-icon-ok>
+                <div class="w-100 mt-1">JCIC Z21</div>
+              </div>
+              <div class="col-3 text-center mt-3 mb-3" [ngClass]=" isMobile ? 'p-2' : ''"><app-icon-problem class="cursor-pointer" (click)="openProblemModal()"></app-icon-problem>
+                <div class="w-100 mt-1">JCIC Z22</div>
+              </div>
+              <div class="col-3 text-center mt-3 mb-3" [ngClass]=" isMobile ? 'p-2' : ''"><app-icon-reconect class="cursor-pointer" (click)="showSpinner()"></app-icon-reconect>
+                <div class="w-100 mt-1">司法院家事宣告</div>
+              </div>
+              <div class="col-3 text-center mt-3 mb-3" [ngClass]=" isMobile ? 'p-2' : ''"><app-icon-ok class="cursor-pointer"></app-icon-ok>
+                <div class="w-100 mt-1">瑕疵或詐騙戶</div>
+              </div>
+              <div class="col-3 text-center mt-3 mb-3" [ngClass]=" isMobile ? 'p-2' : ''"><app-icon-ok class="cursor-pointer"></app-icon-ok>
+                <div class="w-100 mt-1">警示帳戶JCIC通報資料</div>
+              </div>
+              <div class="col-3 text-center mt-3 mb-3" [ngClass]=" isMobile ? 'p-2' : ''"><app-icon-ok class="cursor-pointer"></app-icon-ok>
+                <div class="w-100 mt-1">外匯詐騙戶</div>
+              </div>
+              <div class="col-3 text-center mt-3 mb-3" [ngClass]=" isMobile ? 'p-2' : ''"><app-icon-ok class="cursor-pointer"></app-icon-ok>
+                <div class="w-100 mt-1">台外幣存放款歸戶</div>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix d-block mb-4 w-100"></div>
+          <div class="col-6 compare-body-content">
+            <div class="compare-header-2 mb-2">
+              防治洗錢及資恐查詢結果</div>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <div class="row fixContent">
+                  <div
+                    class="col-sm-4 col-lg-3 text-left compare-data-label"
+                  >
+                  AML狀態
+                  </div>
+                  <div class="col-sm-8 col-lg-9 text-left compare-data-text">
+                    正常 <div class="btn btn-orange" [ngClass]=" isMobile ? ' ml-2' : ' ml-5'" (click)="showSpinner()">
+                      <app-icon-reload></app-icon-reload> 重新查詢
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                  <div
+                    class="col-sm-4 col-lg-3 text-left compare-data-label"
+                  >
+                    CIF評級
+                  </div>
+                  <div class="col-sm-8 col-lg-9 text-left compare-data-text">
+                    低風險
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 compare-body-content">
+            <div class="compare-header-2 mb-2">
+              法定代理人審核作業</div>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <div class="row fixContent">
+                    <div
+                      class="col-sm-7 col-lg-4 text-left compare-data-label"
+                    >
+                    法代一資料審核
+                    </div>
+                    <div class="col-sm-5 col-lg-8 text-left compare-data-text agent-status">
+                      <a class="" (click)="openAgent1Modal()">
+                       <app-icon-checked></app-icon-checked> 同意
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div
+                      class="col-sm-7 col-lg-4 text-left compare-data-label"
+                    >
+                    法代二資料審核
+                    </div>
+                    <div class="col-sm-5 col-lg-8 text-left compare-data-text agent-status">
+                      <a class="" (click)="openAgent2Modal()">
+                        <app-icon-edit></app-icon-edit> 待審核
+                      </a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </app-card>
+  <div class="card card-btn-area">
+    <div class="w-100">
+      <button class="btn btn-primary mr-2" (click)="openRejectModal()">
+        拒絕開戶
+      </button>
+      <button class="btn btn-primary mr-2">
+        至臨櫃審查
+      </button>
+      <button class="btn btn-primary mr-2" (click)="showSpinner();openOpening()">通過</button>
+      <button class="btn btn-primary float-right" (click)="showSpinner();openOpening()">下一步</button>
+    </div>
+  </div>
+</div>
+<ngx-spinner [fullScreen]="true" type="ball-clip-rotate-multiple" size="medium" class="ngx-spinner">
+  <p class="loading text-center">{{loadingMsg || '資料讀取中...'}}</p>
+</ngx-spinner>

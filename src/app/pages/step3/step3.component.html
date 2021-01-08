@@ -1,0 +1,67 @@
+<div class="step3">
+  <app-card [title]="'數存開戶審查服務'" [stepNum]="'3'">
+    <div class="compare">
+      <div class="compare-title">
+        <div class="form-group form-row case-header-width">
+          <div class="col-form-label text-left cathybk-label-text">
+            案件狀態：2009120000122&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+            審查次數：1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+            最後審查狀態：<button
+            class="btn btn-primary btn-30 btn-reason"  (click)="openModal()"
+          >
+            待補件
+          </button>
+          </div>
+        </div>
+      </div>
+      <div class="compare-body step3-height">
+        <div #list>
+            <div class="row info" *ngIf="deposit">
+              <div class="col-12 text-center">
+                <h3 class="mt-0 mb-2">開戶完成</h3>
+                <span class="lead font-weight-bold orange">{{timeLeft}} 秒後將跳轉待審核之開戶案件</span>
+              </div>
+            </div>
+            <div class="row info" *ngIf="deposit">
+              <div class="col-12 text-center">
+                <h3 class="mt-0 mb-2">開戶失敗</h3>
+                <div class="w-100 text-center">
+                  <div class="btn btn-orange" (click)="showSpinner()">
+                    <app-icon-reload></app-icon-reload> 重新發送電文
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- <ng-container *ngIf="isFailed; else elseSuccesss">
+          <div class="row info">
+            <div class="col-12 text-center">
+              <h3 class="mt-0 mb-2">開戶失敗</h3>
+              <div class="w-100 text-center">
+                <div class="btn btn-orange" (click)="showSpinner()">
+                  <app-icon-reload></app-icon-reload> 重新發送電文
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+        <ng-template #elseSuccesss>
+          <div class="row info">
+            <div class="col-12 text-center">
+              <h3 class="mt-0 mb-2">開戶完成</h3>
+              <span class="lead font-weight-bold orange">5秒後將跳轉待審核之開戶案件</span>
+            </div>
+          </div>
+        </ng-template> -->
+      </div>
+    </div>
+  </app-card>
+  <div class="card card-btn-area">
+    <div class="w-100">
+      <button class="btn btn-primary float-right" routerLink="/reviewcase">回案件總覽</button>
+    </div>
+  </div>
+</div>
+<ngx-spinner [fullScreen]="true" type="ball-clip-rotate-multiple" size="medium" class="ngx-spinner">
+  <p class="loading text-center">{{loadingMsg || '資料讀取中...'}}</p>
+</ngx-spinner>

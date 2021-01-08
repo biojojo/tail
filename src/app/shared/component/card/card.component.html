@@ -1,0 +1,48 @@
+<div class="card">
+  <div class="card-title">
+    <div class="row">
+      <app-icon-card-header></app-icon-card-header>
+      <span class="title">{{ title || '' }}</span>
+      <div *ngIf="showStep" class="step row">
+        <a class="step-circle" routerLink="/step1" href="/step1">
+          <div
+            [ngClass]="{
+              'circle-active': stepNum === '1',
+              circle: stepNum !== '1'
+            }"
+          >
+            1
+          </div>
+          <div class="circle-memo">確認證件影像</div>
+          <div class="line"><hr /></div>
+        </a>
+        <a class="step-circle" routerLink="/step2" href="/step2">
+          <div
+            [ngClass]="{
+              'circle-active': stepNum === '2',
+              circle: stepNum !== '2'
+            }"
+          >
+            2
+          </div>
+          <div class="circle-memo">確認審核資料</div>
+          <div class="line"><hr /></div>
+        </a>
+        <div class="">
+          <div
+            [ngClass]="{
+              'circle-active': stepNum === '3',
+              circle: stepNum !== '3'
+            }"
+          >
+            3
+          </div>
+          <div class="circle-memo">完成開戶審查</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <ng-content></ng-content>
+  </div>
+</div>

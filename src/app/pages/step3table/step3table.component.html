@@ -1,0 +1,574 @@
+<div class="step3table">
+  <app-card [title]="'填寫對保查檢資料'" [stepNum]="'2'">
+    <div class="compare">
+      <div class="compare-title">
+        <div class="form-group form-row case-header-width">
+          <div class="col-form-label text-left cathybk-label-text">
+            案件狀態：2009120000122&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+            審查次數：1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+            最後審查狀態：<button
+            class="btn btn-primary btn-30 btn-reason"  (click)="openModal()"
+          >
+            待補件
+          </button>
+          </div>
+        </div>
+      </div>
+      <div class="compare-body">
+        <div class="w-100 card-btn-area border-0 mt-0">
+          <button class="btn btn-primary mr-2">
+            下載開戶注意事項
+          </button>
+          <button class="btn btn-primary mr-2">
+            電子查檢表
+          </button>
+          <button class="btn btn-primary mr-2">紙本查檢表</button>
+        </div>
+        <div class="w-100 compare-body-content mt-3">
+          <div class="compare-header-2 border-radius-0">
+            活期性存款開戶查檢表</div>
+            <div class="compare-body-data">
+              <ul class="list-group border-radius-0">
+                <li class="list-group-item">
+                  <div class="row">
+                    <div
+                      class="col-sm-2 text-left compare-data-label"
+                    >
+                      ID
+                    </div>
+                    <div
+                      class="col-sm-4 text-left compare-data-text"
+                    >
+                      A123456789
+                    </div>
+                    <div
+                      class="col-sm-2 text-left compare-data-label"
+                    >
+                      戶名
+                    </div>
+                    <div
+                      class="col-sm-4 text-left compare-data-text"
+                    >
+                      王大明
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div
+                      class="col-sm-2 text-left compare-data-label"
+                    >
+                      經辦行編
+                    </div>
+                    <div
+                      class="col-sm-4 text-left compare-data-text"
+                    >
+                      333
+                    </div>
+                    <div
+                      class="col-sm-2 text-left compare-data-label"
+                    >
+                      經辦姓名
+                    </div>
+                    <div
+                      class="col-sm-4 text-left compare-data-text"
+                    >
+                      周大有
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="compare-header-2 compare-header-2-orange border-radius-0" [ngClass]=" isMobile ? 'd-none' : ''">
+              <div class="row">
+                <div class="col-6 text-center">檢核項目</div>
+                <div class="col-6 text-center">確認結果</div>
+              </div>
+            </div>
+            <div class="compare-body-data">
+              <ul class="list-group border-radius-0">
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">01</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">對保人員是否已向客戶告知「個資法之法定告知事項」、「客戶須知」及「提供帳戶交詐騙集團使用將觸犯法律」事宜？</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qa001 class="w-100"></app-qa001>
+                    </div>
+                  </div>
+                </li><!-- 01 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">02</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">存戶是否屬「PEP」、「RCA」或<a (click)="openOccupationModal()">「敏感性行業/職業」</a>？<span class="red w-100 d-block">*存戶若屬PEP、RCA，且尚未往來任何產品，須先會洗防部並呈防制洗錢及打擊資恐專責主管同意。 </span></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qa002 class="w-100"></app-qa002>
+                    </div>
+                  </div>
+                </li><!-- 02 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">03</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">存戶是否為「在台無住所外國人」(即無居留證)？</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qacommon class="w-100"></app-qacommon>
+                    </div>
+                  </div>
+                </li><!-- 03 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">04</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">是否已徵提CRS表單(若前已徵提且稅籍資料未異動，則免再徵提)？</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qa004 class="w-100"></app-qa004>
+                    </div>
+                  </div>
+                </li><!-- 04 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">05</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">具有「美國」稅籍【註】之存戶是否已徵提完整FATCA文件(W-9/同意函)？(若前已徵提且稅籍資料未異動，則免再徵提；不具美國稅務身份者請勾選「不適用」)<br/>【註】美國公民或持有美國綠卡或近三年在美居住滿183天(「今年天數≧31天」且「今年天數+去年天數*1/3+前年天數*1/6≧183天」)<span class="red w-100 d-block">*個人出生地是美國，卻表明非美國籍：應另徵提棄籍證明</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qa005 class="w-100"></app-qa005>
+                    </div>
+                  </div>
+                </li><!-- 05 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">06</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">CRS表單/W-9/同意函內容是否完整？<br/>個人：姓名、出生日期/國家/城市、現居地址、稅務身分、簽章、簽署日期<span class="red w-100 d-block">*具TW以外國籍，應提供英文資料及稅籍編號(若未提供稅籍編號，應提供理由，惟美國為必徵提)</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qatrue class="w-100"></app-qatrue>
+                    </div>
+                  </div>
+                </li><!-- 06 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">07</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">經檢視存戶稅務身分已通過合理性測試。</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qatrue class="w-100"></app-qatrue>
+                    </div>
+                  </div>
+                </li><!-- 07 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">08</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">客戶表示不具美國稅務身分時，亦無留存美國地址及美國電話？</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qacorrect class="w-100"></app-qacorrect>
+                    </div>
+                  </div>
+                </li><!-- 08 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">09</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">是否已執行雙重身分證明文件查核？<span class="red w-100 d-block">*詳參開戶注意事項：①提示文件、⑥異常狀況、⑦回應</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qa009 class="w-100"></app-qa009>
+                    </div>
+                  </div>
+                </li><!-- 09 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">10</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">身分證件相片與本人相符，若為「國民身分證」是否無偽變造情形？<span class="red w-100 d-block">詳參開戶注意事項：①提示文件、⑥異常狀況、⑦回應</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qatrue class="w-100"></app-qatrue>
+                    </div>
+                  </div>
+                </li><!-- 10 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">11</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">填寫開戶資料需不斷詢問他人地址、電話等相關欄位。<span class="red w-100 d-block">詳參開戶注意事項：④開戶時之異常舉止、⑥異常狀況、⑦回應</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qaok class="w-100"></app-qaok>
+                    </div>
+                  </div>
+                </li><!-- 11 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">12</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">簽章處確為本人為之。如為既有存戶且「基本資料」有異動者，應提醒存戶：<br/>(1)連絡方式變更將同步異動其ID項下各項業務往來資料(如信用卡、外匯、基金)。<br/>(2)以負責人ID開立帳戶(如籌備處)，亦會異動負責人原留存之資料。<span class="red w-100 d-block">詳參開戶注意事項：④開戶時之異常舉止、⑥異常狀況、⑦回應</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qatrue class="w-100"></app-qatrue>
+                    </div>
+                  </div>
+                </li><!-- 12 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">13</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">連絡方式有留存室話，若僅留存手機，是否已經有權簽章人員核准？</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qatrue class="w-100"></app-qatrue>
+                    </div>
+                  </div>
+                </li><!-- 13 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">14</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">建立業務關係目的(即開戶目的，可複選)<span class="red w-100 d-block">*勾選「其他」，請自行輸入開戶目的+B18:C18</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qa014 class="w-100"></app-qa014>
+                    </div>
+                  </div>
+                </li><!-- 14 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">15</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">清楚知道自己與本行有無其他業務往來 <span class="red w-100 d-block">*(1)詳參開戶注意事項：②應對話術、③職業、⑤申請存款相關服務性業務時之異常舉止、⑥異常狀況、⑦回應</span><span class="red w-100 d-block">(2)勾選「其他」，請自行輸入往來業務</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qa015 class="w-100"></app-qa015>
+                    </div>
+                  </div>
+                </li><!-- 15 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">16</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">職業與客戶本人氣質等外觀表現是否符合？ <span class="red w-100 d-block">詳參開戶注意事項：②應對話術、③職業、⑤申請存款相關服務性業務時之異常舉止、⑥異常狀況、⑦回應</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qaok class="w-100"></app-qaok>
+                    </div>
+                  </div>
+                </li><!-- 16 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">17</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">客戶主動詢問電話語音/網路/ATM等問題，並積極表現要申請之行為，與其職業或外觀氣質是否相當？ <span class="red w-100 d-block">詳參開戶注意事項：②應對話術、③職業、⑤申請存款相關服務性業務時之異常舉止、⑥異常狀況、⑦回應</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qaok class="w-100"></app-qaok>
+                    </div>
+                  </div>
+                </li><!-- 17 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">18</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">「工作狀態」填寫全/兼職工作時，服務機構是否填寫完整？另，「服務機構」若為「公司」，是否留存「經濟部商工查詢」之查詢記錄？</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qa018 class="w-100"></app-qa018>
+                    </div>
+                  </div>
+                </li><!-- 18 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">19</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">存戶是否為年輕人(20~25歲)且無固定工作或待業中？ <span class="red w-100 d-block">選「是」，應提供經斟酌仍予開戶之原因</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qa019 class="w-100"></app-qa019>
+                    </div>
+                  </div>
+                </li><!-- 19 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">20</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">1~3項經單位主管核准得免留存開戶影像，勾選第3項者，請敘明原因：</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qa020 class="w-100"></app-qa020>
+                    </div>
+                  </div>
+                </li><!-- 20 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">21</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">為免有協助證券投資以人頭戶開戶之嫌，對於整批開立「證券存款戶」者，若通訊地址及聯絡電話相同、或開戶筆跡相似者宜予婉拒。 <span class="red w-100 d-block">詳參開戶注意事項：⑥異常狀況、⑦回應</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qa021 class="w-100"></app-qa021>
+                    </div>
+                  </div>
+                </li><!-- 21 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">22</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">(1)查詢內政部戶役政網站(www.ris.gov.tw)或聯合徵信中心之「Z21國民身分證領補換資料查詢驗證」或持晶片居留證者至內政部移民署網站之「晶片居留證資料查詢」(icinfo.immigration.gov.tw/NIL_WEB/NFCData.aspx)<br/>(2)查詢聯合徵信中心資料查詢系統「Z22通報案件紀錄及補充註記資訊」、e-TABS系統「60425」、「外匯詐騙戶」及「70060」，資訊是否異常？<br/>(3)最近三個月內(含當日 )，於金融聯合徵信中心因【 新存款開戶】被查詢次數 ，合計是否≧1次以上(不含申請當日本分行之查詢 )。 <span class="red w-100 d-block">如客戶有「身分證被冒用」註記時，應向戶政單位查證。</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qa022 class="w-100"></app-qa022>
+                    </div>
+                  </div>
+                </li><!-- 22 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">23</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">「工作狀態」填寫全/兼職工作時，服務機構是否填寫完整？另，「服務機構」若為「公司」，是否留存「經濟部商工查詢」之查詢記錄？</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qa023 class="w-100"></app-qa023>
+                    </div>
+                  </div>
+                </li><!-- 23 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">24</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">查詢客戶申請當日於本行之新開戶狀況是否異常？</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qa024 class="w-100"></app-qa024>
+                    </div>
+                  </div>
+                </li><!-- 24 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">25</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">是否已執行存戶及其關係人(如下)之建檔？<br/>個人：法定代理人、監護人、輔助人…等</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qa025 class="w-100"></app-qa025>
+                    </div>
+                  </div>
+                </li><!-- 25 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">26</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">存戶及其關係人，經名單掃描，是否屬「應禁止往來」名單？</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qa026 class="w-100"></app-qa026>
+                    </div>
+                  </div>
+                </li><!-- 26 END -->
+                <li class="list-group-item p-0">
+                  <div class="row m-0">
+                    <div class="col-sm-12 col-lg-6 pl-0 d-flex"[ngClass]=" isMobile ? 'border-bottom-line' : ''">
+                      <div class="row m-0 d-contents">
+                        <div class="col-1 col-lg-2 text-center border-right-line"><div class="float-center position-absolute table-nums">27</div></div>
+                        <div class="col-11 col-lg-10 d-flex" [ngClass]=" isMobile ? '' : 'border-right-line'">
+                          <div class="pt-3 pb-3 d-flex align-items-center text-justify">
+                            <p class="mb-0">存戶是否屬「高風險」客戶？ <span class="red w-100 d-block">選「是」，應建檔「EDD」(或確認有效)</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 pt-3 pb-3 d-flex align-items-center text-justify">
+                      <app-qacommon class="w-100"></app-qacommon>
+                    </div>
+                  </div>
+                </li><!-- 27 END -->
+             </ul>
+            </div>
+            <div class="card card-btn-area row">
+                <button class="btn btn-orange float-center p-default" (click)="showSpinner();openOpening()">確認</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </app-card>
+  <div class="card card-btn-area mb-4">
+    <div class="w-100">
+      <button class="btn btn-primary mr-2" (click)="openRejectModal()">
+        拒絕開戶
+      </button>
+      <button class="btn btn-primary mr-2">
+        至臨櫃審查
+      </button>
+      <button class="btn btn-primary mr-2" (click)="showSpinner();openOpening()">通過</button>
+      <button class="btn btn-primary float-right" (click)="showSpinner();openOpening()">下一步</button>
+    </div>
+  </div>
+</div>
+<ngx-spinner [fullScreen]="true" type="ball-clip-rotate-multiple" size="medium" class="ngx-spinner">
+  <p class="loading text-center">{{loadingMsg || '資料讀取中...'}}</p>
+</ngx-spinner>

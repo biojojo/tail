@@ -1,0 +1,66 @@
+<div class="compare-header-2 mb-2">
+  基本資料</div>
+<ul class="list-group">
+  <li class="list-group-item" [ngClass]=" isMobile ? 'p-1' : ''">
+    <div class="row">
+      <div
+        class="text-left compare-data-label" [ngClass]=" isMobile ? 'col basic-title' : 'col-sm-4'"
+      >
+        姓名
+      </div>
+      <div class="text-left compare-data-text" [ngClass]=" isMobile ? '' : 'col-sm-8'">
+        陳筱玲
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item" [ngClass]=" isMobile ? 'p-1' : ''">
+    <div class="row">
+      <div
+        class="text-left compare-data-label" [ngClass]=" isMobile ? 'col basic-title' : 'col-sm-4'"
+      >
+        身分證字號
+      </div>
+      <div class="text-left compare-data-text" [ngClass]=" isMobile ? '' : 'col-sm-8'">
+        A234567890
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item" [ngClass]=" isMobile ? 'p-1' : ''">
+    <div class="row">
+      <div
+        class="text-left compare-data-label" [ngClass]=" isMobile ? 'col basic-title' : 'col-sm-4'"
+      >
+        客戶性質別
+      </div>
+      <div class="text-left compare-data-text" [ngClass]=" isMobile ? '' : 'col-sm-8'">
+        既有客戶
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item" [ngClass]=" isMobile ? 'p-1' : ''">
+    <div class="row">
+      <div
+        class="text-left compare-data-label" [ngClass]=" isMobile ? 'col basic-title' : 'col-sm-4'"
+      >
+      AML狀態
+      </div>
+      <div class="text-left compare-data-text" [ngClass]=" isMobile ? '' : 'col-sm-8'">
+        正常 <br [ngClass]=" isMobile ? 'd-block' : 'd-none'"/><div class="btn btn-orange" (click)="showSpinner()" [ngClass]=" isMobile ? 'mt-1 btn-sm-reload' : 'ml-5'">
+          <app-icon-reload></app-icon-reload> 重新查詢
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="list-group-item" [ngClass]=" isMobile ? 'p-1' : ''">
+    <div class="row">
+      <div
+        class="text-left compare-data-label" [ngClass]=" isMobile ? 'col basic-title' : 'col-sm-4'"
+      >
+        CIF評級
+      </div>
+      <div class="text-left compare-data-text" [ngClass]=" isMobile ? '' : 'col-sm-8'">
+        低風險
+      </div>
+    </div>
+  </li>
+</ul>

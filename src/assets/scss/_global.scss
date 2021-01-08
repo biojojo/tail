@@ -1,0 +1,368 @@
+.row {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+
+.navbar {
+  padding: 0 !important;
+}
+
+.igx-input-group__bundle {
+  padding-top: 0.125rem !important;
+}
+
+.form-control:focus {
+  border-color: $green-color;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.igx-date-picker .igx-calendar__header {
+  background: $green-color !important;
+}
+
+.igx-calendar__header {
+  color: #ffffff !important;
+}
+
+.igx-calendar__date--selected.igx-calendar__date--current
+  .igx-calendar__date-content:hover {
+  color: #ffffff !important;
+  background: $orange-color !important;
+}
+
+.igx-calendar__date--selected.igx-calendar__date--current
+  .igx-calendar__date-content {
+  color: #ffffff !important;
+  background: $orange-color !important;
+}
+
+.igx-calendar__date--current .igx-calendar__date-content {
+  color: $orange-color !important;
+}
+
+.igx-calendar__date--selected .igx-calendar__date-content {
+  color: #ffffff !important;
+  background: $orange-color !important;
+}
+.igx-input-group--focused .igx-input-group__label,
+.igx-input-group--placeholder .igx-input-group__label,
+.igx-input-group--filled .igx-input-group__label {
+  color: #11a847 !important;
+}
+.igx-input-group__border {
+  background-color: #11a847 !important;
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: $green-color;
+  background-color: $green-color;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected,
+.ng-dropdown-panel
+  .ng-dropdown-panel-items
+  .ng-option.ng-option-selected.ng-option-marked {
+  color: $gray-dark-color;
+  font-family: $cathybk-font-family;
+  font-size: 14px;
+
+  background-color: #e4f5ec82;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
+  color: $gray-dark-color;
+  font-family: $cathybk-font-family;
+  font-size: 14px;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
+  background-color: #e4f5ec82;
+  color: $gray-dark-color;
+  font-family: $cathybk-font-family;
+  font-size: 14px;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+  color: $gray-dark-color;
+  font-family: $cathybk-font-family;
+  font-size: 14px;
+}
+
+.card-body {
+  padding-top: 6.25px;
+}
+
+.cathybk-label-text {
+  font-family: $cathybk-font-family;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: $gray-dark-color;
+}
+
+.cathybk-remarks-text {
+  font-family: $cathybk-font-family;
+  font-size: 13px;
+  line-height: 18px;
+  color: $orange-color;
+}
+
+.table-header-text {
+  font-family: $cathybk-font-family;
+  font-size: 12px;
+  color: rgb(17 168 71);
+}
+
+.table-body-text {
+  font-family: $cathybk-font-family;
+  font-size: 13px;
+  font-size: 0.8rem;
+  line-height: 14px;
+  color: $gray-dark-color;
+}
+
+.compare-data-label {
+  font-family: $cathybk-font-family;
+  font-size: 13px;
+  line-height: 23px;
+  font-weight: 500;
+  color: $green-color;
+}
+
+.compare-data-text {
+  font-family: $cathybk-font-family;
+  font-size: 13px;
+  line-height: 20px;
+  color: $gray-dark-color;
+}
+
+.btn-orange {
+  color: #fff;
+  background-color: $orange-color;
+  border-color: $orange-color;
+  padding: 1px 8px;
+}
+
+.btn-orange:hover {
+  color: #fff;
+  background-color: #eb6003;
+  border-color: #eb6003;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.table-result {
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: $cathybk-font-family;
+  font-size: 16px;
+  color: $orange-color;
+}
+
+.table-remarks {
+  font-family: $cathybk-font-family;
+  font-size: 13px;
+  color: $orange-color;
+}
+
+.table-pagination {
+  font-family: $cathybk-font-family;
+  font-size: 13px;
+  color: $gray-dark-color;
+}
+
+.compare-body {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.compare-body-content {
+  padding-right: 10px;
+}
+
+.compare-header-1 {
+  border: 1px solid $green-color;
+  font-family: $cathybk-font-family;
+  font-size: 16px;
+  color: $green-color;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 0.25rem;
+}
+
+.compare-header-2 {
+  background-color: $green-color;
+  font-family: $cathybk-font-family;
+  font-size: 16px;
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 0.25rem;
+}
+
+.compare-header-2-orange {
+  background-color: #ff6000;
+}
+
+.border-radius-0 {
+  border-radius: 0;
+}
+.float-center {
+  right: 0;
+  left: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+}
+.p-default {
+  padding: 0.375rem 0.75rem;
+}
+
+.border-right-line {
+  border-right: 1px solid #ddd;
+}
+
+.border-bottom-line {
+  border-bottom: 1px solid #ddd;
+}
+
+.d-contents {
+  display: flex;
+  width: 100%;
+}
+
+.red {
+  color: #b10000;
+  font-size: 80%;
+}
+
+.qaCommon {
+  padding-right: 0.7rem;
+  label {
+    display: inline;
+  }
+  input[type='text'] {
+    display: inline;
+    max-width: 10.8rem;
+    height: 30px;
+    line-height: 12px;
+  }
+  select {
+    display: inline;
+    padding: 0 1rem;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+.form-group {
+  margin-bottom: 0.6rem;
+}
+
+.qa009 {
+  div:nth-child(1) {
+    display: inline;
+  }
+  .custom-radio {
+    display: inline;
+    margin-right: 1rem;
+  }
+  formly-field:nth-child(1),
+  formly-field:nth-child(2) {
+    label:nth-child(1) {
+      width: 7rem;
+      display: inline-block;
+    }
+  }
+  formly-field:nth-child(4),
+  formly-field:nth-child(5) {
+    label:nth-child(1) {
+      width: 10rem;
+      display: inline-block;
+    }
+  }
+}
+
+.custom-checkbox
+  .custom-control-input:indeterminate
+  ~ .custom-control-label::before {
+  border-color: #aaa !important;
+  background: none !important;
+}
+
+.textarea-cs {
+  textarea {
+    height: 66px;
+    min-height: 66px;
+    max-height: 134px;
+    min-width: 366px;
+  }
+}
+
+.step3table,
+.occupation {
+  .list-group {
+    font-size: 13px;
+    p {
+      font-size: 13px;
+      a,
+      a:hover,
+      a:visited,
+      a:link {
+        color: #0b5cf5;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+    .list-group-item {
+      .table-nums {
+        height: 27px;
+        font-size: 1rem;
+      }
+    }
+    .list-group-item:nth-child(even) {
+      background-color: #fafafa;
+    }
+  }
+}
+
+.ui-theme-settings {
+  position: fixed;
+  z-index: 155;
+  right: -30px;
+  top: 0;
+  height: 100vh;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
+    0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
+    0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),
+    0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+
+  .btn-open-options {
+    @include border-radius(50px);
+    position: absolute;
+    left: -100px;
+    bottom: 40px;
+    padding: 0;
+    height: 54px;
+    line-height: 48px;
+    width: 54px;
+    text-align: center;
+    display: block;
+    margin-top: -27px;
+  }
+}
+
+@media only screen and (min-width: 1660px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .step3table {
+    .list-group {
+      font-size: 1rem;
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}

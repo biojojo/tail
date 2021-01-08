@@ -1,0 +1,43 @@
+<div class="modal-header">
+  <h4 class="modal-title">
+    <app-icon-searchlist></app-icon-searchlist>&nbsp;&nbsp;{{ title }}
+  </h4>
+  <div
+    class="close"
+    aria-label="Close"
+    (click)="activeModal.dismiss('Cross click')"
+  >
+    <span aria-hidden="true">&times;</span>
+  </div>
+</div>
+<div class="modal-body">
+  <ng-template #target></ng-template>
+</div>
+<div class="modal-footer card-btn-area text-center d-block">
+  <ng-container *ngIf="isReviewMode; else elseTemplate">
+    <button
+    type="button"
+    class="btn btn-primary btn-center"
+    (click)="activeModal.close('Close click')"
+  >
+    拒絕
+  </button>
+  <button
+    type="button"
+    class="btn btn-primary btn-center"
+    (click)="activeModal.close('Close click')"
+  >
+    通過
+  </button>
+  </ng-container>
+
+  <ng-template #elseTemplate>
+    <button
+      type="button"
+      class="btn btn-primary btn-center"
+      (click)="activeModal.close('Close click')"
+    >
+      確認
+    </button>
+  </ng-template>
+</div>

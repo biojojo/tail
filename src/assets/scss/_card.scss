@@ -1,0 +1,176 @@
+.card {
+  background-color: $white-color;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 33px;
+
+  .card-title {
+    margin-left: 26px;
+    margin-top: 30px;
+
+    span {
+      display: inline-block;
+      font-family: $cathybk-font-family;
+    }
+
+    .title {
+      font-family: $cathybk-font-family;
+      font-size: 1.8rem;
+      line-height: 25px;
+      font-weight: 500;
+      color: $green-color;
+      margin-left: 10px;
+    }
+
+    .step {
+      position: absolute;
+      right: 10px;
+      top: 20px;
+
+      .circle {
+        width: 60px;
+        height: 60px;
+        background: rgb(181 181 186);
+        -moz-border-radius: 30px;
+        -webkit-border-radius: 30px;
+        border-radius: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 19px;
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: #ffffff;
+        line-height: 60px;
+        text-align: center;
+      }
+
+      .step-circle {
+        width: 150px;
+      }
+      a.step-circle:hover {
+        text-decoration: none;
+      }
+
+      .circle-active {
+        width: 60px;
+        height: 60px;
+        background: rgb(255 96 0);
+        -moz-border-radius: 30px;
+        -webkit-border-radius: 30px;
+        border-radius: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 19px;
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: #ffffff;
+        line-height: 60px;
+        text-align: center;
+      }
+
+      .circle-memo {
+        font-family: $cathybk-font-family;
+        font-size: 16px;
+        line-height: 40px;
+        font-weight: 400;
+        left: -16px;
+        position: relative;
+        color: #474647;
+      }
+
+      .line {
+        width: 70px;
+        position: relative;
+        top: -85px;
+        left: 70px;
+      }
+    }
+  }
+  .m-t-0 {
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .card {
+    .card-title {
+      .step {
+        top: 45px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .card {
+    .card-title {
+      .step {
+        right: -20px;
+        .step-circle {
+          width: 100px;
+        }
+        .circle {
+          width: 30px;
+          height: 30px;
+          background: #b5b5ba;
+          border-radius: 30px;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 19px;
+          font-size: 0.6rem;
+          font-weight: 400;
+          color: #ffffff;
+          line-height: 30px;
+          text-align: center;
+        }
+        .circle-active {
+          width: 30px;
+          height: 30px;
+          background: #ff6000;
+          border-radius: 30px;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 19px;
+          font-size: 0.6rem;
+          font-weight: 400;
+          color: #ffffff;
+          line-height: 30px;
+          text-align: center;
+        }
+        .circle-memo {
+          font-family: '微軟正黑體' !important;
+          font-size: 0.85rem;
+          line-height: 20px;
+          font-weight: 400;
+          left: -36px;
+          position: relative;
+          right: 0;
+          top: 10px;
+          margin: auto;
+          text-align: center;
+          width: 100px;
+        }
+        .line {
+          width: 40px;
+          position: relative;
+          top: -50px;
+          left: 18px;
+          margin: auto;
+          margin: auto;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .step {
+    bottom: 0;
+    top: 60px !important;
+  }
+  .step1 {
+    .card {
+      .card-title {
+        .title {
+          position: absolute;
+        }
+        .step {
+          right: -10px;
+        }
+      }
+    }
+  }
+}

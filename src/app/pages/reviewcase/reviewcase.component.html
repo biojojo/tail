@@ -1,0 +1,288 @@
+<div class="reviewcase">
+  <app-card [title]="'開戶審查案件查詢'">
+    <div class="form-row m-t-20">
+      <div class="col-lg-5 col-md-5 mr-lg-5 ml-lg-5">
+        <div class="form-group form-row">
+          <label
+            class="col-lg-3 col-md-5 col-form-label text-right cathybk-label-text"
+            >案件編號：</label
+          >
+          <div class="col-lg-9 col-md-7">
+            <select class="form-control">
+              <option selected>請選擇</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group form-row">
+          <label
+            class="col-lg-3 col-md-5 col-form-label text-right cathybk-label-text"
+            >客戶 I D ：</label
+          >
+          <div class="col-lg-9 col-md-7">
+            <input
+              type="text"
+              class="form-control"
+              value=""
+              placeholder="請輸入客戶ID"
+              (click)="dateDefault()"
+            />
+          </div>
+        </div>
+        <div class="form-group form-row">
+          <label
+            for="staticEmail"
+            class="col-lg-3 col-md-5 col-form-label text-right cathybk-label-text"
+            >行員編號：</label
+          >
+          <div class="col-lg-9 col-md-7">
+            <input
+              type="text"
+              class="form-control"
+              value=""
+              placeholder="請輸入5碼行員編號"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-7">
+        <div class="form-group form-row">
+          <label
+            class="col-lg-3 col-md-4 col-form-label text-right cathybk-label-text"
+            >進件期間：</label
+          >
+          <div class="col-lg-9 col-md-8">
+            <div class="form-row">
+              <div class="col-4">
+                <button
+                  type="button"
+                  class="form-control btn"
+                  [ngClass]="{
+                    'btn-success': today,
+                    'btn-outline-success': !today
+                  }"
+                  (click)="changeToday()"
+                >
+                  當日
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group form-row">
+          <label
+            for="staticEmail"
+            class="col-lg-3 col-md-4 col-form-label text-right cathybk-label-text"
+          ></label>
+          <div class="col-lg-9 col-md-8">
+            <div class="form-row">
+              <div class="col-4" [ngClass]=" isMobile ? 'col-12' : ''">
+                <button
+                  type="button"
+                  class="form-control btn btn-over-hidden"
+                  [ngClass]="{
+                    'btn-success': range,
+                    'btn-outline-success': !range
+                  }"
+                  (click)="changeRangeDate()"
+                >
+                  自訂期間</button
+                ><br />
+              </div>
+              <div class="col-4" [ngClass]=" isMobile ? 'col-12 mt-3 mb-3' : ''">
+                <igx-date-picker [label]="'起日'"></igx-date-picker>
+              </div>
+              <div class="col-4" [ngClass]=" isMobile ? 'col-12' : ''">
+                <igx-date-picker [label]="'迄日'"></igx-date-picker>
+              </div>
+            </div>
+
+            <div class="cathybk-remarks-text m-t-10">
+              *自訂查詢區間最大為6個月
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group form-row">
+          <label
+            class="col-lg-3 col-md-4 col-form-label text-right cathybk-label-text"
+          ></label>
+          <div class="col-lg-9 col-md-8">
+            <div class="form-row">
+              <div class="offset-8 col-4">
+                <button type="button" class="form-control btn btn-orange">
+                  查詢
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </app-card>
+  <div class="card">
+    <div class="card-title m-t-0"></div>
+    <div class="card-body">
+      <div style="clear: both"></div>
+      <div class="search-list">
+        <div class="search-list-collapse">
+          <div class="collapse-body">
+            <div class="table-result">
+              <div class="reviewcase-count mr-2">總計1,055筆案件</div>
+              <select class="form-control reviewcase-list col-1">
+                <option selected>50-100筆</option>
+              </select>
+            </div>
+            <div class="clearfix mb-2"></div>
+            <!-- topScroll start -->
+            <div
+              #topScroll
+              class="collapse-body-content"
+              (scroll)="topScrollHandler($event)"
+            >
+              <div
+                class="collapse-body-table digital-situation-rewiew fix-top-scroll">
+                <table class="list-group m-t-10">
+                  <thead class="list-group-item p-0">
+                    <tr>
+                      <th class="text-center table-header-text min-w10">
+                        案件編號
+                      </th>
+                      <th class="text-center table-header-text min-w5">
+                        申請人
+                      </th>
+                      <th class="text-center table-header-text min-w7">
+                        身份證字號
+                      </th>
+                      <th class="text-center table-header-text min-w10">
+                        台幣帳號
+                      </th>
+                      <th class="text-center table-header-text min-w10">
+                        外幣帳號
+                      </th>
+                      <th class="text-center table-header-text min-w10">
+                        客戶手機
+                      </th>
+                      <th class="text-center table-header-text min-w6">
+                        案件狀態 <i class="fas fa-sort"></i>
+                      </th>
+                      <th class="text-center table-header-text min-w10">
+                        進件日期
+                      </th>
+                      <th class="text-center table-header-text min-w12">
+                        申請人案件說明
+                      </th>
+                      <th class="text-center table-header-text min-w12">
+                        法代一案件說明
+                      </th>
+                      <th class="text-center table-header-text min-w12">
+                        法代二案件說明
+                      </th>
+                      <th class="text-center table-header-text min-w7">
+                        補件截止時間
+                      </th>
+                      <th class="text-center table-header-text min-w6">
+                        審件單位 <i class="fas fa-sort"></i>
+                      </th>
+                      <th class="text-center table-header-text min-w6">
+                        審件經辦 <i class="fas fa-sort"></i>
+                      </th>
+                      <th class="text-center table-header-text min-w7">
+                        審件時間
+                      </th>
+                      <th class="text-center table-header-text min-w5">
+                        覆核主管
+                      </th>
+                      <th class="text-center table-header-text min-w7">
+                        覆核時間
+                      </th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </div>
+            <!-- topScroll end -->
+            <div
+              #bottomScroll
+              class="collapse-body-content"
+              (scroll)="bottomScrollHandler($event)"
+            >
+            <button #leftArrow class="arrow left-arrow d-none" [ngClass]="isMobile ? 'd-block' : ''" (click)="onClickScrollLeft()"><i class="fas fa-angle-left"></i></button><button #rightArrow class="arrow right-arrow  d-none" [ngClass]="isMobile ? 'd-block' : ''" (click)="onClickScrollRight()"><i class="fas fa-angle-right"></i></button>
+              <div class="collapse-body-table digital-situation-rewiew">
+                <table class="list-group m-t-10">
+                  <tbody
+                    class="list-group-item p-0"
+                    *ngFor="let item of counter(10); let i = index"
+                  >
+                    <tr>
+                      <td class="text-center table-body-text min-w10">
+                        <a href="#" routerLink="/step1" class="underline">
+                          20091200001{{ i }}
+                        </a>
+                      </td>
+                      <td class="text-center table-body-text min-w5">王美美</td>
+                      <td class="text-center table-body-text min-w7">
+                        F223456789
+                      </td>
+                      <td class="text-center table-body-text min-w10">
+                        00123456789
+                      </td>
+                      <td class="text-center table-body-text min-w10">
+                        00123456789
+                      </td>
+                      <td class="text-center table-body-text min-w10">
+                        0910123456
+                      </td>
+                      <td class="text-center table-body-text min-w6">待審核</td>
+                      <td class="text-center table-body-text min-w10">
+                        2020-09-12
+                      </td>
+                      <td class="text-left table-body-text min-w12">-</td>
+                      <td class="text-left table-body-text min-w12">
+                        <ol>
+                          <li class="m-t-10 ml-2">逾期未補件</li>
+                        </ol>
+                      </td>
+                      <td class="text-left table-body-text min-w12">
+                        <ol>
+                          <li class="m-t-10 ml-2">
+                            未補件：身分證經比對不符(如：資料錯誤、非本人證件⋯)
+                          </li>
+                          <li class="m-t-10 ml-2">
+                            未補件：身分證經比對不符(如：資料錯誤、非本人證件⋯)
+                          </li>
+                          <li class="m-t-10 ml-2">
+                            未補件：身分證經比對不符(如：資料錯誤、非本人證件⋯)
+                          </li>
+                        </ol>
+                      </td>
+                      <td class="text-center table-body-text min-w7">-</td>
+                      <td class="text-center table-body-text min-w6">761</td>
+                      <td class="text-center table-body-text min-w6">12345</td>
+                      <td class="text-center table-body-text min-w7">
+                        2020-09-12
+                      </td>
+                      <td class="text-center table-body-text min-w5">01234</td>
+                      <td class="text-center table-body-text min-w7">
+                        2020-09-12
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="collapse-body-footer">
+              <div class="form-row">
+                <div class="col">
+                  <div class="table-remarks d-none">
+                    *開戶完成資料僅保留14天
+                  </div>
+                </div>
+                <div class="col m-t-10"><app-pagination></app-pagination></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

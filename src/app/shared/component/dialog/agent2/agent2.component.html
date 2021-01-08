@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-6 compare-body-content">
+    <app-agent-basic></app-agent-basic>
+  </div>
+  <div class="col-6 compare-body-content">
+    <div class="compare-header-2 mb-2" [ngClass]=" isMobile ? 'compare-title-btn-cs' : ''">
+      綜合查詢結果<div class="btn btn-orange float-right position-absolute reload-right-top" (click)="showSpinner()" [ngClass]=" isMobile ? 'btn-sm-reload' : ''">
+        <app-icon-reload></app-icon-reload> 重新查詢
+      </div></div>
+    <div *ngIf="!isEditable && !isEdit2able">
+      <div class="row compare-body-content aml aml-simple">
+        <div class="col-4 text-center mt-4 mb-4" [ngClass]=" isMobile ? 'p-3 pad-t-0' : ''" (click)="onEdit2Click()"><app-icon-ok class="cursor-pointer"></app-icon-ok>
+          <div class="w-100 mt-1">JCIC Z21</div>
+        </div>
+        <div class="col-4 text-center mt-4 mb-4" [ngClass]=" isMobile ? 'p-3 pad-t-0' : ''" (click)="onEditClick()"><app-icon-problem class="cursor-pointer"></app-icon-problem>
+          <div class="w-100 mt-1">JCIC Z22</div>
+        </div>
+        <div class="col-4 text-center mt-4 mb-4" [ngClass]=" isMobile ? 'p-3 pad-t-0' : ''"><app-icon-reconect class="cursor-pointer" (click)="showSpinner()"></app-icon-reconect>
+          <div class="w-100 mt-1">司法院家事宣告</div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="isEditable">
+      <h4 class="modal-title"><app-icon-searchlist></app-icon-searchlist>&nbsp;&nbsp; JCIC Z22 查詢結果有資料
+        <app-icon-return class="position-absolute float-right icon-return" (click)="onSaveClick()"></app-icon-return></h4>
+      <iframe class="wide" src="https://www.ifc.org/wps/wcm/connect/e7e10e94-3cd8-4f4c-b6f8-1e14ea9eff80/45464_IFC_AML_Report.pdf?MOD=AJPERES&CVID=mKKNshy" scrolling="yes" width="100%" height="200" border="0" frameborder="0" allowfullscreen="true"> </iframe>
+    </div>
+    <div *ngIf="isEdit2able">
+      <h4 class="modal-title"><app-icon-searchlist></app-icon-searchlist>&nbsp;&nbsp; JCIC Z22 查詢結果無資料
+      <app-icon-return class="position-absolute float-right icon-return" (click)="onSaveClick()"></app-icon-return></h4>
+      <iframe class="wide" src="https://ws.ndc.gov.tw/Download.ashx?u=LzAwMS9hZG1pbmlzdHJhdG9yLzEwL3JlbGZpbGUvNTU2Ni83Nzc2L2RkOGIxMTczLWRlNzYtNDU4YS1iYzM2LWYxZTRkNzFhZTkwNC5wZGY%3D&n=6ZmE5Lu2X%2BWvpuaWveioiOeVqy5wZGY%3D&icon=..pdf" scrolling="yes" width="100%" height="200" border="0" frameborder="0" allowfullscreen="true"> </iframe>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,1403 @@
+<div class="step1">
+  <app-card [title]="'數存開戶審查服務'" [stepNum]="'1'">
+    <div class="compare">
+      <div class="compare-title">
+        <div class="form-group form-row case-header-width">
+          <div class="col-form-label text-left cathybk-label-text">
+            案件狀態：2009120000122&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+            審查次數：1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+            最後審查狀態：<button
+            class="btn btn-primary btn-30 btn-reason"  (click)="openModal()"
+          >
+            待補件
+          </button>
+          </div>
+        </div>
+      </div>
+      <div class="compare-body">
+        <div class="form-row">
+          <div class="col compare-body-content">
+            <div class="compare-header-1 mb-2">申請人資料檢核</div>
+            <div class="compare-image-data">
+              <div class="compare-image">
+                <app-img-utils
+                  [imageURL]="'/assets/img/01.jpg'"
+                ></app-img-utils>
+              </div>
+              <div class="img-line"></div>
+              <div class="compare-image">
+                <app-img-utils
+                  [imageURL]="'/assets/img/02.jpg'"
+                ></app-img-utils>
+              </div>
+              <div class="img-line"></div>
+              <div class="compare-image">
+                <app-img-utils
+                  [imageURL]="'/assets/img/03.jpg'"
+                ></app-img-utils>
+              </div>
+              <div class="img-line"></div>
+              <div class="compare-image">
+                <app-img-utils
+                  [imageURL]="'/assets/img/04.jpg'"
+                ></app-img-utils>
+              </div>
+              <div class="img-line"></div>
+              <div class="compare-image">
+                <app-img-utils
+                  [imageURL]="'/assets/img/05.jpg'"
+                ></app-img-utils>
+              </div>
+            </div>
+          </div>
+          <div class="col compare-body-content">
+            <div class="compare-header-2 mb-2" [ngClass]=" isMobile ? ' compare-title-btn-cs' : ''">
+              申請人證件資料
+              <div class="editBtn" (click)="editUserData1(); toggle()">
+                <ng-container *ngIf="!userDate1Edit; else elseTemplateIcon"
+                  ><app-icon-edit></app-icon-edit
+                ></ng-container>
+                <ng-template #elseTemplateIcon
+                  ><app-icon-checked></app-icon-checked
+                ></ng-template>
+                {{ buttonName }}
+              </div>
+            </div>
+
+            <ng-container *ngIf="!userDate1Edit; else elseTemplate">
+              <div class="compare-body-data">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        戶名
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        王美美
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        出生日期
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        民國101年01月01日
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row fixContent">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        英文戶名
+                      </div>
+                      <div
+                      class="col-md-6 col-lg-10 text-left compare-data-text"
+                      >
+                        WANG MEI MEI
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row fixContent">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        出生國家
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                      <select class="form-control">
+                        <option selected>請選擇</option>
+                        <option>非美國</option>
+                        <option>美國</option>
+                      </select>
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        出生城市
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        台北市
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        身分證字號
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        F223456789
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        發證日期
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        民國108年07年01日
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        補換領
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        初領
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        發證地點
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        北市
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        戶籍地址
+                      </div>
+                      <div class="col-sm-12 col-lg-10 text-left compare-data-text">
+                        臺北市信義區安康里008鄰松仁路７號十四樓
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="data-status">
+                  <div class="form-group form-row row">
+                    <label
+                      class="need-data-label col-form-label text-right reason-label-text"
+                      >待補件原因：</label
+                    >
+                    <div class="need-data-content">
+                      <ng-select
+                        class="custom"
+                        [items]="reasons"
+                        [multiple]="true"
+                        [closeOnSelect]="false"
+                        placeholder="請選擇"
+                        (change)="selectedReason()"
+                        [(ngModel)]="selectedReasons"
+                      >
+                        <ng-template ng-multi-label-tmp></ng-template>
+                        <ng-template
+                          ng-option-tmp
+                          let-item="item"
+                          let-index="index"
+                          let-item$="item$"
+                        >
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              [ngModel]="item$.selected"
+                              class="custom-control-input"
+                            />
+                            <label
+                              class="form-check-label ml-2 custom-control-label"
+                              >{{ item }}</label
+                            >
+                          </div>
+                        </ng-template>
+                      </ng-select>
+                      <!-- {{ selectedReasons }} -->
+                      <ul class="alert-reason">
+                        <li
+                          class="reason-label-text"
+                          *ngFor="let reason of reviewReasons"
+                        >
+                          <app-icon-alert></app-icon-alert> {{ reason }}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+            <ng-template #elseTemplate>
+              <div class="compare-body-data fixContent">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        戶名
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        王美美
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        出生日期
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        <input class="form-control" value="民國101年01月01日" />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        英文戶名
+                      </div>
+                      <div
+                        class="col-sm-10 text-left compare-data-text"
+                      >
+                      <input class="form-control d-inline three-part" value="MEI" title="名；ifrst name"/><input class="form-control d-inline three-part" value="MEI" title="中間名；mid name"/><input class="form-control d-inline three-part" value="WANG" title="姓；last name"/>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        出生國家
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        <select class="form-control">
+                          <option selected>請選擇</option>
+                          <option>非美國</option>
+                          <option>美國</option>
+                        </select>
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label" [ngClass]=" isMobile ? ' mt-2' : ''"
+                      >
+                        出生城市
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text" [ngClass]=" isMobile ? ' mt-2' : ''"
+                      >
+                        <input class="form-control" value="台北市" />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        身分證字號
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        F223456789
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        發證日期
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        <input class="form-control" value="民國108年07年01日" />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        補換領
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        <select class="form-control">
+                          <option>初領</option>
+                          <option>補領</option>
+                        </select>
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label" [ngClass]=" isMobile ? ' mt-2' : ''"
+                      >
+                        發證地點
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text" [ngClass]=" isMobile ? ' mt-2' : ''"
+                      >
+                        <select class="form-control">
+                          <option value="基隆市">基隆市</option>
+                          <option value="臺北市" selected>臺北市</option>
+                          <option value="新北市">新北市</option>
+                          <option value="桃園市">桃園市</option>
+                          <option value="新竹市">新竹市</option>
+                          <option value="新竹縣">新竹縣</option>
+                          <option value="苗栗縣">苗栗縣</option>
+                          <option value="臺中市">臺中市</option>
+                          <option value="彰化縣">彰化縣</option>
+                          <option value="南投縣">南投縣</option>
+                          <option value="雲林縣">雲林縣</option>
+                          <option value="嘉義市">嘉義市</option>
+                          <option value="嘉義縣">嘉義縣</option>
+                          <option value="臺南市">臺南市</option>
+                          <option value="高雄市">高雄市</option>
+                          <option value="屏東縣">屏東縣</option>
+                          <option value="臺東縣">臺東縣</option>
+                          <option value="花蓮縣">花蓮縣</option>
+                          <option value="宜蘭縣">宜蘭縣</option>
+                          <option value="澎湖縣">澎湖縣</option>
+                          <option value="金門縣">金門縣</option>
+                          <option value="連江縣">連江縣</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        戶籍地址
+                      </div>
+                      <div class="col-sm-12 col-lg-10 text-left compare-data-text">
+                        <select
+                          class="form-control col-md-5 float-left mr-2"
+                        >
+                          <option value="基隆市">基隆市</option>
+                          <option value="臺北市" selected>臺北市</option>
+                          <option value="新北市">新北市</option>
+                          <option value="桃園市">桃園市</option>
+                          <option value="新竹市">新竹市</option>
+                          <option value="新竹縣">新竹縣</option>
+                          <option value="苗栗縣">苗栗縣</option>
+                          <option value="臺中市">臺中市</option>
+                          <option value="彰化縣">彰化縣</option>
+                          <option value="南投縣">南投縣</option>
+                          <option value="雲林縣">雲林縣</option>
+                          <option value="嘉義市">嘉義市</option>
+                          <option value="嘉義縣">嘉義縣</option>
+                          <option value="臺南市">臺南市</option>
+                          <option value="高雄市">高雄市</option>
+                          <option value="屏東縣">屏東縣</option>
+                          <option value="臺東縣">臺東縣</option>
+                          <option value="花蓮縣">花蓮縣</option>
+                          <option value="宜蘭縣">宜蘭縣</option>
+                          <option value="澎湖縣">澎湖縣</option>
+                          <option value="金門縣">金門縣</option>
+                          <option value="連江縣">連江縣</option>
+                        </select>
+                        <select
+                          class="form-control col-md-5 float-left"
+                        >
+                          <option value="中正區">中正區</option>
+                          <option value="大同區">大同區</option>
+                          <option value="中山區">中山區</option>
+                          <option value="松山區">松山區</option>
+                          <option value="大安區">大安區</option>
+                          <option value="萬華區">萬華區</option>
+                          <option value="信義區" selected>信義區</option>
+                          <option value="士林區">士林區</option>
+                          <option value="北投區">北投區</option>
+                          <option value="內湖區">內湖區</option>
+                          <option value="南港區">南港區</option>
+                          <option value="文山區">文山區</option>
+                        </select>
+                        <input
+                          class="form-control col-md-12 col-sm-12 float-left m-t-10"
+                          value="安康里008鄰松仁路７號十四樓"
+                        />
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="data-status">
+                  <div class="form-group form-row row">
+                    <label
+                      class="need-data-label col-form-label text-right reason-label-text"
+                      >待補件原因：</label
+                    >
+                    <div class="need-data-content">
+                      <ng-select
+                        class="custom"
+                        [items]="reasons"
+                        [multiple]="true"
+                        [closeOnSelect]="false"
+                        placeholder="請選擇"
+                        (change)="selectedReason()"
+                        [(ngModel)]="selectedReasons"
+                      >
+                        <ng-template ng-multi-label-tmp></ng-template>
+                        <ng-template
+                          ng-option-tmp
+                          let-item="item"
+                          let-index="index"
+                          let-item$="item$"
+                        >
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              [ngModel]="item$.selected"
+                              class="custom-control-input"
+                            />
+                            <label
+                              class="form-check-label ml-2 custom-control-label"
+                              >{{ item }}</label
+                            >
+                          </div>
+                        </ng-template>
+                      </ng-select>
+                      <!-- {{ selectedReasons }} -->
+                      <ul class="alert-reason">
+                        <li
+                          class="reason-label-text"
+                          *ngFor="let reason of reviewReasons"
+                        >
+                          <app-icon-alert></app-icon-alert> {{ reason }}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-body">
+        <div class="form-row">
+          <div class="col compare-body-content">
+            <div class="compare-header-1 mb-2">法定代理人一資料檢核</div>
+            <div class="compare-image-data">
+              <div class="compare-image">
+                <app-img-utils
+                  [imageURL]="'/assets/img/01.jpg'"
+                ></app-img-utils>
+              </div>
+              <div class="img-line"></div>
+              <div class="compare-image">
+                <app-img-utils
+                  [imageURL]="'/assets/img/02.jpg'"
+                ></app-img-utils>
+              </div>
+              <div class="img-line"></div>
+              <div class="compare-image">
+                <app-img-utils
+                  [imageURL]="'/assets/img/05.jpg'"
+                ></app-img-utils>
+              </div>
+            </div>
+          </div>
+          <div class="col compare-body-content">
+            <div class="compare-header-2 mb-2" [ngClass]=" isMobile ? ' compare-title-btn-cs' : ''">
+              法定代理人一證件資料
+              <div class="editBtn" (click)="editUserData2(); toggle()">
+                <ng-container *ngIf="!userDate2Edit; else elseTemplate2Icon"
+                  ><app-icon-edit></app-icon-edit
+                ></ng-container>
+                <ng-template #elseTemplate2Icon
+                  ><app-icon-checked></app-icon-checked
+                ></ng-template>
+                {{ buttonName }}
+              </div>
+            </div>
+            <ng-container *ngIf="!userDate2Edit; else elseTemplate2">
+              <div class="compare-body-data">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        戶名
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        王美美
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        出生日期
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        民國101年01月01日
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row fixContent">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        出生國家
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                      <select class="form-control">
+                        <option selected>請選擇</option>
+                        <option>非美國</option>
+                        <option>美國</option>
+                      </select>
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        出生城市
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        台北市
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        身分證字號
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        F223456789
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        發證日期
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        民國108年07年01日
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        補換領
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        初領
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        發證地點
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        北市
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        戶籍地址
+                      </div>
+                      <div class="col-sm-12 col-lg-10 text-left compare-data-text">
+                        臺北市信義區安康里008鄰松仁路７號十四樓
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="data-status">
+                  <div class="form-group form-row row">
+                    <label
+                      class="need-data-label col-form-label text-right reason-label-text"
+                      >待補件原因：</label
+                    >
+                    <div class="need-data-content">
+                      <ng-select
+                        class="custom"
+                        [items]="reasons"
+                        [multiple]="true"
+                        [closeOnSelect]="false"
+                        placeholder="請選擇"
+                        (change)="selectedReason()"
+                        [(ngModel)]="selectedReasons"
+                      >
+                        <ng-template ng-multi-label-tmp></ng-template>
+                        <ng-template
+                          ng-option-tmp
+                          let-item="item"
+                          let-index="index"
+                          let-item$="item$"
+                        >
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              [ngModel]="item$.selected"
+                              class="custom-control-input"
+                            />
+                            <label
+                              class="form-check-label ml-2 custom-control-label"
+                              >{{ item }}</label
+                            >
+                          </div>
+                        </ng-template>
+                      </ng-select>
+                      <!-- {{ selectedReasons }} -->
+                      <ul class="alert-reason">
+                        <li
+                          class="reason-label-text"
+                          *ngFor="let reason of reviewReasons"
+                        >
+                          <app-icon-alert></app-icon-alert> {{ reason }}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+            <ng-template #elseTemplate2>
+              <div class="compare-body-data fixContent">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        戶名
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        王美美
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label" [ngClass]=" isMobile ? ' mt-2' : ''"
+                      >
+                        出生日期
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text" [ngClass]=" isMobile ? ' mt-2' : ''"
+                      >
+                        <input class="form-control" value="民國101年01月01日" />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        出生國家
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        <select class="form-control">
+                          <option selected>請選擇</option>
+                          <option>非美國</option>
+                          <option>美國</option>
+                        </select>
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label" [ngClass]=" isMobile ? ' mt-2' : ''"
+                      >
+                        出生城市
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text" [ngClass]=" isMobile ? ' mt-2' : ''"
+                      >
+                        <input class="form-control" value="台北市" />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        身分證字號
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        F223456789
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        發證日期
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        <input class="form-control" value="民國108年07年01日" />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        補換領
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        <select class="form-control">
+                          <option>初領</option>
+                          <option>補領</option>
+                        </select>
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label" [ngClass]=" isMobile ? ' mt-2' : ''"
+                      >
+                        發證地點
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text" [ngClass]=" isMobile ? ' mt-2' : ''"
+                      >
+                        <select class="form-control">
+                          <option value="基隆市">基隆市</option>
+                          <option value="臺北市" selected>臺北市</option>
+                          <option value="新北市">新北市</option>
+                          <option value="桃園市">桃園市</option>
+                          <option value="新竹市">新竹市</option>
+                          <option value="新竹縣">新竹縣</option>
+                          <option value="苗栗縣">苗栗縣</option>
+                          <option value="臺中市">臺中市</option>
+                          <option value="彰化縣">彰化縣</option>
+                          <option value="南投縣">南投縣</option>
+                          <option value="雲林縣">雲林縣</option>
+                          <option value="嘉義市">嘉義市</option>
+                          <option value="嘉義縣">嘉義縣</option>
+                          <option value="臺南市">臺南市</option>
+                          <option value="高雄市">高雄市</option>
+                          <option value="屏東縣">屏東縣</option>
+                          <option value="臺東縣">臺東縣</option>
+                          <option value="花蓮縣">花蓮縣</option>
+                          <option value="宜蘭縣">宜蘭縣</option>
+                          <option value="澎湖縣">澎湖縣</option>
+                          <option value="金門縣">金門縣</option>
+                          <option value="連江縣">連江縣</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        戶籍地址
+                      </div>
+                      <div class="col-sm-12 col-lg-10 text-left compare-data-text">
+                        <select
+                          class="form-control col-md-5 float-left mr-2"
+                        >
+                          <option value="基隆市">基隆市</option>
+                          <option value="臺北市" selected>臺北市</option>
+                          <option value="新北市">新北市</option>
+                          <option value="桃園市">桃園市</option>
+                          <option value="新竹市">新竹市</option>
+                          <option value="新竹縣">新竹縣</option>
+                          <option value="苗栗縣">苗栗縣</option>
+                          <option value="臺中市">臺中市</option>
+                          <option value="彰化縣">彰化縣</option>
+                          <option value="南投縣">南投縣</option>
+                          <option value="雲林縣">雲林縣</option>
+                          <option value="嘉義市">嘉義市</option>
+                          <option value="嘉義縣">嘉義縣</option>
+                          <option value="臺南市">臺南市</option>
+                          <option value="高雄市">高雄市</option>
+                          <option value="屏東縣">屏東縣</option>
+                          <option value="臺東縣">臺東縣</option>
+                          <option value="花蓮縣">花蓮縣</option>
+                          <option value="宜蘭縣">宜蘭縣</option>
+                          <option value="澎湖縣">澎湖縣</option>
+                          <option value="金門縣">金門縣</option>
+                          <option value="連江縣">連江縣</option>
+                        </select>
+                        <select
+                          class="form-control col-md-5 float-left"
+                        >
+                          <option value="中正區">中正區</option>
+                          <option value="大同區">大同區</option>
+                          <option value="中山區">中山區</option>
+                          <option value="松山區">松山區</option>
+                          <option value="大安區">大安區</option>
+                          <option value="萬華區">萬華區</option>
+                          <option value="信義區" selected>信義區</option>
+                          <option value="士林區">士林區</option>
+                          <option value="北投區">北投區</option>
+                          <option value="內湖區">內湖區</option>
+                          <option value="南港區">南港區</option>
+                          <option value="文山區">文山區</option>
+                        </select>
+                        <input
+                          class="form-control col-md-12 col-sm-12 float-left m-t-10"
+                          value="安康里008鄰松仁路７號十四樓"
+                        />
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="data-status">
+                  <div class="form-group form-row row">
+                    <label
+                      class="need-data-label col-form-label text-right reason-label-text"
+                      >待補件原因：</label
+                    >
+                    <div class="need-data-content">
+                      <ng-select
+                        class="custom"
+                        [items]="reasons"
+                        [multiple]="true"
+                        [closeOnSelect]="false"
+                        placeholder="請選擇"
+                        (change)="selectedReason()"
+                        [(ngModel)]="selectedReasons"
+                      >
+                        <ng-template ng-multi-label-tmp></ng-template>
+                        <ng-template
+                          ng-option-tmp
+                          let-item="item"
+                          let-index="index"
+                          let-item$="item$"
+                        >
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              [ngModel]="item$.selected"
+                              class="custom-control-input"
+                            />
+                            <label
+                              class="form-check-label ml-2 custom-control-label"
+                              >{{ item }}</label
+                            >
+                          </div>
+                        </ng-template>
+                      </ng-select>
+                      <!-- {{ selectedReasons }} -->
+                      <ul class="alert-reason">
+                        <li
+                          class="reason-label-text"
+                          *ngFor="let reason of reviewReasons"
+                        >
+                          <app-icon-alert></app-icon-alert> {{ reason }}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-body">
+        <div class="form-row">
+          <div class="col compare-body-content">
+            <div class="compare-header-1 mb-2">法定代理人二資料檢核</div>
+            <div class="compare-image-data">
+              <div class="compare-image">
+                <app-img-utils
+                  [imageURL]="'/assets/img/01.jpg'"
+                ></app-img-utils>
+              </div>
+              <div class="img-line"></div>
+              <div class="compare-image">
+                <app-img-utils
+                  [imageURL]="'/assets/img/02.jpg'"
+                ></app-img-utils>
+              </div>
+              <div class="img-line"></div>
+              <div class="compare-image">
+                <app-img-utils
+                  [imageURL]="'/assets/img/05.jpg'"
+                ></app-img-utils>
+              </div>
+            </div>
+          </div>
+          <div class="col compare-body-content">
+            <div class="compare-header-2 mb-2" [ngClass]=" isMobile ? ' compare-title-btn-cs' : ''">
+              法定代理人二證件資料
+              <div class="editBtn" (click)="editUserData3(); toggle()">
+                <ng-container *ngIf="!userDate3Edit; else elseTemplate3Icon"
+                  ><app-icon-edit></app-icon-edit
+                ></ng-container>
+                <ng-template #elseTemplate3Icon
+                  ><app-icon-checked></app-icon-checked
+                ></ng-template>
+                {{ buttonName }}
+              </div>
+            </div>
+            <ng-container *ngIf="!userDate3Edit; else elseTemplate3">
+              <div class="compare-body-data">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        戶名
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        王美美
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        出生日期
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        民國101年01月01日
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row fixContent">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        出生國家
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                      <select class="form-control">
+                        <option selected>請選擇</option>
+                        <option>非美國</option>
+                        <option>美國</option>
+                      </select>
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        出生城市
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        台北市
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        身分證字號
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        F223456789
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        發證日期
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        民國108年07年01日
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        補換領
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        初領
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        發證地點
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        北市
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        戶籍地址
+                      </div>
+                      <div class="col-sm-12 col-lg-10 text-left compare-data-text">
+                        臺北市信義區安康里008鄰松仁路７號十四樓
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="data-status">
+                  <div class="form-group form-row row">
+                    <label
+                      class="need-data-label col-form-label text-right reason-label-text"
+                      >待補件原因：</label
+                    >
+                    <div class="need-data-content">
+                      <ng-select
+                        class="custom"
+                        [items]="reasons"
+                        [multiple]="true"
+                        [closeOnSelect]="false"
+                        placeholder="請選擇"
+                        (change)="selectedReason()"
+                        [(ngModel)]="selectedReasons"
+                      >
+                        <ng-template ng-multi-label-tmp></ng-template>
+                        <ng-template
+                          ng-option-tmp
+                          let-item="item"
+                          let-index="index"
+                          let-item$="item$"
+                        >
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              [ngModel]="item$.selected"
+                              class="custom-control-input"
+                            />
+                            <label
+                              class="form-check-label ml-2 custom-control-label"
+                              >{{ item }}</label
+                            >
+                          </div>
+                        </ng-template>
+                      </ng-select>
+                      <!-- {{ selectedReasons }} -->
+                      <ul class="alert-reason">
+                        <li
+                          class="reason-label-text"
+                          *ngFor="let reason of reviewReasons"
+                        >
+                          <app-icon-alert></app-icon-alert> {{ reason }}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+            <ng-template #elseTemplate3>
+              <div class="compare-body-data fixContent">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        戶名
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        王美美
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label" [ngClass]=" isMobile ? ' mt-2' : ''"
+                      >
+                        出生日期
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text" [ngClass]=" isMobile ? ' mt-2' : ''"
+                      >
+                        <input class="form-control" value="民國101年01月01日" />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        出生國家
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        <select class="form-control">
+                          <option selected>請選擇</option>
+                          <option>非美國</option>
+                          <option>美國</option>
+                        </select>
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label" [ngClass]=" isMobile ? ' mt-2' : ''"
+                      >
+                        出生城市
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text" [ngClass]=" isMobile ? ' mt-2' : ''"
+                      >
+                        <input class="form-control" value="台北市" />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        身分證字號
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        F223456789
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        發證日期
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        <input class="form-control" value="民國108年07年01日" />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        補換領
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text"
+                      >
+                        <select class="form-control">
+                          <option>初領</option>
+                          <option>補領</option>
+                        </select>
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label" [ngClass]=" isMobile ? ' mt-2' : ''"
+                      >
+                        發證地點
+                      </div>
+                      <div
+                        class="col-md-6 col-lg-4 text-left compare-data-text" [ngClass]=" isMobile ? ' mt-2' : ''"
+                      >
+                        <select class="form-control">
+                          <option value="基隆市">基隆市</option>
+                          <option value="臺北市" selected>臺北市</option>
+                          <option value="新北市">新北市</option>
+                          <option value="桃園市">桃園市</option>
+                          <option value="新竹市">新竹市</option>
+                          <option value="新竹縣">新竹縣</option>
+                          <option value="苗栗縣">苗栗縣</option>
+                          <option value="臺中市">臺中市</option>
+                          <option value="彰化縣">彰化縣</option>
+                          <option value="南投縣">南投縣</option>
+                          <option value="雲林縣">雲林縣</option>
+                          <option value="嘉義市">嘉義市</option>
+                          <option value="嘉義縣">嘉義縣</option>
+                          <option value="臺南市">臺南市</option>
+                          <option value="高雄市">高雄市</option>
+                          <option value="屏東縣">屏東縣</option>
+                          <option value="臺東縣">臺東縣</option>
+                          <option value="花蓮縣">花蓮縣</option>
+                          <option value="宜蘭縣">宜蘭縣</option>
+                          <option value="澎湖縣">澎湖縣</option>
+                          <option value="金門縣">金門縣</option>
+                          <option value="連江縣">連江縣</option>
+                        </select>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row">
+                      <div
+                        class="col-md-6 col-lg-2 text-left compare-data-label"
+                      >
+                        戶籍地址
+                      </div>
+                      <div class="col-sm-10 text-left compare-data-text">
+                        <select
+                          class="form-control col-md-5 float-left mr-2"
+                        >
+                          <option value="基隆市">基隆市</option>
+                          <option value="臺北市" selected>臺北市</option>
+                          <option value="新北市">新北市</option>
+                          <option value="桃園市">桃園市</option>
+                          <option value="新竹市">新竹市</option>
+                          <option value="新竹縣">新竹縣</option>
+                          <option value="苗栗縣">苗栗縣</option>
+                          <option value="臺中市">臺中市</option>
+                          <option value="彰化縣">彰化縣</option>
+                          <option value="南投縣">南投縣</option>
+                          <option value="雲林縣">雲林縣</option>
+                          <option value="嘉義市">嘉義市</option>
+                          <option value="嘉義縣">嘉義縣</option>
+                          <option value="臺南市">臺南市</option>
+                          <option value="高雄市">高雄市</option>
+                          <option value="屏東縣">屏東縣</option>
+                          <option value="臺東縣">臺東縣</option>
+                          <option value="花蓮縣">花蓮縣</option>
+                          <option value="宜蘭縣">宜蘭縣</option>
+                          <option value="澎湖縣">澎湖縣</option>
+                          <option value="金門縣">金門縣</option>
+                          <option value="連江縣">連江縣</option>
+                        </select>
+                        <select
+                          class="form-control col-md-5 float-left"
+                        >
+                          <option value="中正區">中正區</option>
+                          <option value="大同區">大同區</option>
+                          <option value="中山區">中山區</option>
+                          <option value="松山區">松山區</option>
+                          <option value="大安區">大安區</option>
+                          <option value="萬華區">萬華區</option>
+                          <option value="信義區" selected>信義區</option>
+                          <option value="士林區">士林區</option>
+                          <option value="北投區">北投區</option>
+                          <option value="內湖區">內湖區</option>
+                          <option value="南港區">南港區</option>
+                          <option value="文山區">文山區</option>
+                        </select>
+                        <input
+                          class="form-control col-md-12 col-sm-12 float-left m-t-10"
+                          value="安康里008鄰松仁路７號十四樓"
+                        />
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="data-status">
+                  <div class="form-group form-row row">
+                    <label
+                      class="need-data-label col-form-label text-right reason-label-text"
+                      >待補件原因：</label
+                    >
+                    <div class="need-data-content">
+                      <ng-select
+                        class="custom"
+                        [items]="reasons"
+                        [multiple]="true"
+                        [closeOnSelect]="false"
+                        placeholder="請選擇"
+                        (change)="selectedReason()"
+                        [(ngModel)]="selectedReasons"
+                      >
+                        <ng-template ng-multi-label-tmp></ng-template>
+                        <ng-template
+                          ng-option-tmp
+                          let-item="item"
+                          let-index="index"
+                          let-item$="item$"
+                        >
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              [ngModel]="item$.selected"
+                              class="custom-control-input"
+                            />
+                            <label
+                              class="form-check-label ml-2 custom-control-label"
+                              >{{ item }}</label
+                            >
+                          </div>
+                        </ng-template>
+                      </ng-select>
+                      <!-- {{ selectedReasons }} -->
+                      <ul class="alert-reason">
+                        <li
+                          class="reason-label-text"
+                          *ngFor="let reason of reviewReasons"
+                        >
+                          <app-icon-alert></app-icon-alert> {{ reason }}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+  </app-card>
+  <div class="card card-btn-area">
+    <div class="w-100">
+      <button class="btn btn-primary mr-2" (click)="openRejectModal()">
+        拒絕開戶
+      </button>
+      <button class="btn btn-primary mr-2" [routerLink]="['/review']">
+        回首頁
+      </button>
+      <button class="btn btn-primary mr-2">待補件</button>
+      <button class="btn btn-primary float-right" routerLink="/step2">下一步</button>
+    </div>
+  </div>
+</div>

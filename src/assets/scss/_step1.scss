@@ -1,0 +1,497 @@
+.step1,
+.step2 {
+  padding-bottom: 33px;
+
+  .compare-body {
+    margin-bottom: 33px;
+    h4 {
+      color: #11a847;
+      font-size: 1.2rem;
+    }
+  }
+
+  .compare-body-data {
+    .list-group-item {
+      padding-left: 0px !important;
+    }
+
+    .data-status {
+      margin-top: 20px;
+    }
+    select {
+      font-size: 13px;
+    }
+  }
+
+  .compare-image-data {
+    background-color: #f2f2f2;
+    height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    .compare-image {
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      .img-h {
+        width: 405px;
+      }
+    }
+
+    .img-line {
+      margin-left: 20px;
+      margin-right: 20px;
+      border-bottom: 1px solid $line-gray;
+    }
+
+    .image-cropper-content {
+      // margin-top: 22px;
+      // margin-right: 22px;
+
+      .image-cropper-button {
+        width: 70px;
+        height: 30px;
+        background-color: #ffffff;
+        margin-bottom: 10px;
+        padding-left: 5px;
+        border-radius: 0.25rem;
+        cursor: pointer;
+
+        font-family: $cathybk-font-family;
+        font-size: 14px;
+        line-height: 30px;
+        color: $gray-dark-color;
+      }
+    }
+  }
+}
+
+.reason-label-text {
+  font-family: $cathybk-font-family;
+  font-size: 14px;
+  line-height: 22px;
+  color: $gray-dark-color;
+}
+
+.editBtn {
+  position: absolute;
+  right: 12px;
+  top: 6px;
+  text-align: center;
+  width: 70px;
+  height: 30px;
+  background-color: $orange-color;
+  padding-left: 20px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  text-indent: initial;
+  font-family: $cathybk-font-family;
+  font-size: 14px;
+  line-height: 30px;
+  color: #ffffff;
+
+  app-icon-edit {
+    top: 0;
+    left: 4px;
+    bottom: 0;
+    margin: auto;
+    height: 35px;
+    position: absolute;
+  }
+  app-icon-checked {
+    top: 2px;
+    left: 4px;
+    bottom: 0;
+    margin: auto;
+    height: 35px;
+    position: absolute;
+  }
+}
+.btn-primary {
+  color: #f55c00 !important;
+  background-color: #fff !important;
+  border-color: #f55c00 !important;
+  border-radius: 3px;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:active:focus {
+  color: #fff !important;
+  background-color: #f55c00 !important;
+  border-color: #f55c00 !important;
+}
+.btn-30 {
+  height: 30px;
+  line-height: 0px;
+  top: 0;
+  bottom: 0;
+  margin: initial;
+  padding: 16px 10px;
+}
+.need-data-label {
+  width: 6rem;
+}
+.need-data-content {
+  width: calc(100% - 6rem);
+}
+ul.alert-reason {
+  width: 100%;
+  padding: 10px 0;
+  li {
+    width: 47%;
+    padding-right: 3%;
+    float: left;
+    display: inline;
+    line-height: 2em;
+  }
+}
+.card-btn-area {
+  background: none;
+  border: none;
+  margin-top: 20px;
+  .btn {
+    width: 136px;
+    width: 10rem;
+  }
+}
+ul.reason {
+  max-width: 320px;
+  position: relative;
+  right: 0;
+  left: 0;
+  margin: auto;
+  margin-top: 20px;
+  li {
+    line-height: 2rem;
+    strong {
+      color: #f55c00;
+    }
+  }
+}
+.fixContent {
+  input,
+  select {
+    font-size: 1rem;
+    line-height: 20px;
+    color: #474647;
+    padding: 0rem 0.75rem;
+  }
+  .compare-data-label,
+  .compare-data-text {
+    line-height: 33px;
+    .three-part {
+      width: 32.66%;
+      margin-right: 1%;
+    }
+    .three-part:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.step1,
+.step2 {
+  .compare-body {
+    .compare-body-data {
+      input,
+      select {
+        font-size: 13px;
+      }
+    }
+  }
+}
+.reject {
+  formly-field {
+    width: 50%;
+    float: left;
+    display: inline;
+    min-height: 160px;
+    textarea {
+      height: 6rem !important;
+    }
+  }
+}
+.btn-success {
+  color: #fff;
+  background-color: #11a847;
+  border-color: #11a847;
+}
+.btn-default {
+  color: #11a847;
+  background-color: #fff;
+  border-color: #11a847;
+}
+.btn-default:hover {
+  color: #11a847;
+}
+.cursor-none {
+  cursor: default !important;
+}
+.case-header-width {
+  br {
+    display: none;
+  }
+}
+.reload-right-top {
+  right: 16px;
+  top: 6px;
+}
+.ng-select-container {
+  font-size: 13px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.aml {
+  .w-100 {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+  .mt-3.mb-3 {
+    max-height: 80px;
+  }
+}
+.aml-simple {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 80px;
+  right: 0;
+  left: 0;
+}
+.modal-body {
+  iframe.wide {
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+  }
+}
+.icon-return {
+  right: 16px;
+  cursor: pointer;
+}
+.agent-status {
+  a {
+    color: #f55c00;
+    text-decoration: underline;
+    cursor: pointer;
+    svg {
+      margin-right: 10px;
+      width: 18px;
+      height: 16px;
+      g {
+        fill: #11a847;
+      }
+    }
+  }
+}
+.loading {
+  color: #ffffff;
+}
+.ngx-spinner {
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+  }
+}
+.compare-title-btn-cs {
+  position: relative;
+  text-align: left;
+  text-indent: 16px;
+  .btn {
+    text-indent: initial;
+  }
+}
+.btn-sm-reload {
+  padding: 2px 7px;
+  right: 4px;
+  font-size: 13px;
+}
+.basic-title {
+  max-width: 6rem;
+}
+.pad-t-0 {
+  padding-top: 0 !important;
+}
+.step3-height {
+  min-height: 475px;
+  position: relative;
+  .info {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 7rem;
+    h3 {
+      font-size: 2.3rem;
+      font-weight: 400;
+      color: #474647;
+    }
+    .orange {
+      color: #f55c00;
+    }
+  }
+}
+@media only screen and (min-width: 1660px) {
+  .btn {
+    font-size: 1rem;
+  }
+  .ng-placeholder {
+    font-size: 1rem;
+  }
+  .menu {
+    .function-title {
+      font-size: 1rem;
+    }
+    .function-item {
+      a {
+        font-size: 1rem;
+      }
+    }
+  }
+  .table-result {
+    font-size: 1.2rem;
+  }
+  .table-header-text {
+    font-size: 1rem;
+  }
+  .table-body-text {
+    font-size: 1rem;
+  }
+  .table-remarks,
+  .cathybk-remarks-text {
+    font-size: 1rem;
+  }
+  .step1,
+  .step2 {
+    .compare-body {
+      h4 {
+        font-size: 1.6rem;
+      }
+      .compare-body-data {
+        input,
+        select {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .need-data-label {
+    width: 7rem;
+    font-size: 1rem;
+  }
+  .need-data-content {
+    width: calc(100% - 7rem);
+  }
+  ul.alert-reason {
+    li {
+      font-size: 1rem;
+    }
+  }
+  .cathybk-label-text,
+  ul.reason {
+    font-size: 1rem;
+  }
+  .compare-data-label,
+  .compare-data-text {
+    font-size: 1rem;
+  }
+  .custom-control {
+    font-size: 1rem;
+  }
+  .aml {
+    .w-100 {
+      font-size: 1.1rem;
+      line-height: initial;
+    }
+  }
+  .ng-select.ng-select-multiple {
+    .ng-select-container {
+      .ng-value-container {
+        .ng-placeholder {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  .custom-control-label {
+    font-size: 1rem;
+    line-height: 30px;
+  }
+  .loading-text {
+    top: 57% !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .reject {
+    formly-field {
+      width: 100%;
+      display: block;
+      min-height: 160px;
+    }
+  }
+  .case-header-width {
+    width: 360px;
+    br {
+      display: block;
+    }
+    .btn-reason {
+      bottom: -24px;
+    }
+  }
+  .step1 .compare-image-data .image-cropper-content .image-cropper-button {
+    width: 40px;
+    height: 56px;
+  }
+  ul.alert-reason {
+    li {
+      width: 100%;
+      padding-right: 0%;
+    }
+  }
+}
+@media only screen and (max-width: 991px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .btn-sm-reload {
+    svg {
+      width: 14px;
+      height: 11px;
+    }
+  }
+  .modal-body {
+    .modal-title {
+      font-size: 1rem;
+      line-height: 1.5em;
+      margin-bottom: 5px;
+    }
+    .reload-right-top {
+      top: 8px;
+    }
+  }
+  .compare-body-content.aml {
+    svg {
+      width: 84%;
+      height: 84%;
+    }
+  }
+  .btn-currency-cs {
+    padding: 0.5rem;
+  }
+  .card-btn-area {
+    .btn {
+      width: initial;
+    }
+  }
+  .case-header-width {
+    br:nth-child(2) {
+      display: block;
+    }
+    .btn-reason {
+      bottom: -24px;
+    }
+  }
+}
