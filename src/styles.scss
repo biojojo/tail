@@ -1,12 +1,12 @@
-// CSS Reset, comment out if not required or using a different module
+/* CSS Reset, comment out if not required or using a different module */
 @import '~minireset.css/minireset';
 /* You can add global styles to this file, and also import other style files */
 
 @import '~igniteui-angular/lib/core/styles/themes/index';
-// Uncomment the following lines if you want to add a custom palette:
-// $primary: #731963 !default;
-// $secondary: #ce5712 !default;
-// $app-palette: igx-palette($primary, $secondary);
+/* Uncomment the following lines if you want to add a custom palette: */
+/* $primary: #731963 !default; */
+/* $secondary: #ce5712 !default; */
+/* $app-palette: igx-palette($primary, $secondary); */
 
 /* autoprefixer grid: on */
 
@@ -26,3 +26,7 @@
 @import 'assets/scss/reviewcase';
 @import 'assets/scss/step1';
 @import 'assets/scss/ng-modal';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
